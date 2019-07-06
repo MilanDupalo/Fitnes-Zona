@@ -1,0 +1,46 @@
+.NAME-OF-PAGE-With-sidebar {
+    display: grid;
+    grid-template-rows: 70px auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header" "main main aside" "footer footer footer";
+    @media(max-width: 768px) {
+        display: block;
+    }
+    @media(max-width: 480px) {
+        display: block;
+    }
+    header {
+        grid-area: header;
+    }
+    main {
+        grid-area: main;
+    }
+    aside {
+        grid-area: aside;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
+
+.home-page {
+    display: grid;
+    grid-template-rows: 70px auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    @media(max-width: 768px) {
+        display: block;
+    }
+    @media(max-width: 480px) {
+        display: block;
+    }
+    header {
+        grid-area: header;
+    }
+    main {
+        grid-area: main;
+    }
+    footer {
+        grid-area: footer;
+    }
+}
