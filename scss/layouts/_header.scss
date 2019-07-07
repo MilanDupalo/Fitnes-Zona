@@ -1,0 +1,145 @@
+.home-page__header {
+    @include nav-bg;
+    color: $white;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    &-logo {
+        left: 10px;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        text-align: center;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: 4px;
+        margin-top: 4px;
+        @media (max-width: $breakpoint-mobile-small) {
+            font-size: 1.6rem;
+        }
+    }
+    &-search {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        padding: 20px;
+        a {
+            color: $white;
+            margin-left: 10px;
+            text-decoration: none;
+            display: -webkit-inline-box;
+        }
+        p {
+            margin-right: 20px;
+            letter-spacing: 3px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            @media (max-width: $breakpoint-mobile-big) {
+                display: none;
+            }
+        }
+        i {
+            font-size: 2rem;
+            vertical-align: bottom;
+            margin-top: -3px;
+        }
+        &__form {
+            display: none;
+            height: 100vh;
+            position: fixed;
+            z-index: 99;
+            width: 100%;
+            background: $bg;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            h2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-45%, -50%);
+                font-size: 14rem;
+                letter-spacing: 8vw;
+                font-weight: bolder;
+                color: $search-text;
+                @media (max-width: $breakpoint-tablet) {
+                    font-size: 9rem;
+                    letter-spacing: 1vw;
+                }
+            }
+            i {
+                position: absolute;
+                right: 15px;
+                top: 0;
+                padding: 20px;
+                font-size: 1.5rem;
+                margin-top: 20px;
+            }
+            form {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: 100%;
+                input {
+                    width: 60%;
+                    text-align: center;
+                    padding: 10px;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 3px solid hsla(0, 0%, 100%, 0.6);
+                    outline: none;
+                    color: $white;
+                    font-size: 2rem;
+                    transition: .3s;
+                    @media (max-width: $breakpoint-tablet) {
+                        width: 90%;
+                        font-size: 1.2rem;
+                    }
+                    &:focus {
+                        border-bottom: 3px solid $btn;
+                    }
+                    &::placeholder {
+                        color: $white;
+                        font-family: 'Hind', sans-serif;
+                        font-size: 2rem;
+                        @media (max-width: $breakpoint-tablet) {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    &::-ms-input-placeholder {
+                        color: $white;
+                        font-family: 'Hind', sans-serif;
+                        font-size: 2rem;
+                    }
+                    &::-ms-input-placeholder {
+                        color: $white;
+                        font-family: 'Hind', sans-serif;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    &-menu {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        padding: 20px;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        display: -webkit-inline-box;
+        z-index: 9999;
+        &-text {
+            margin-left: 20px;
+            letter-spacing: 3px;
+            @media (max-width: $breakpoint-mobile-big) {
+                display: none;
+            }
+        }
+    }
+}
