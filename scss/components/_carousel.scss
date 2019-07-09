@@ -1,0 +1,167 @@
+.carousel {
+    position: relative;
+    margin-top: 50px;
+    background-color: $bg;
+    width: 98%;
+    margin: 50px auto;
+    height: 80vh;
+    -webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+    @media (max-width: $breakpoint-mobile-big) {
+        height: 70vh;
+    }
+    &-inner {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        &__item {
+            position: absolute;
+            opacity: 0;
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+            height: 100%;
+            width: 100%;
+            &-content {
+                display: block;
+                height: auto;
+                max-width: 100%;
+                height: 100%;
+                width: 100%;
+                margin: auto;
+                background: rgba(0, 0, 0, 0.5);
+                &--tittle {
+                    position: absolute;
+                    width: 75%;
+                    top: 30%;
+                    @include horisontal-center;
+                    text-align: center;
+                    color: $white;
+                    font-size: 3rem;
+                    letter-spacing: 3px;
+                    @media (max-width: $breakpoint-mobile-big) {
+                        font-size: 1.8rem;
+                        width: 90%;
+                    }
+                    @media (min-width: $breakpoint-mobile-small) and (max-width: $breakpoint-tablet) {
+                        top: 35%;
+                    }
+                    @media (min-width:$breakpoint-mobile-small-1) and (max-width: $breakpoint-mobile-small-1 + 50px) {
+                        font-size: 1.5rem;
+                        top: 35%;
+                    }
+                    @media (min-width:$big-screen) and (max-width:$big-screen-2) {
+                        width: 40%;
+                    }
+                }
+                &--text {
+                    position: absolute;
+                    top: 50%;
+                    width: 70%;
+                    @include horisontal-center;
+                    text-align: center;
+                    color: $white;
+                    font-size: 1.3rem;
+                    @media (max-width: $breakpoint-tablet) {
+                        display: none;
+                    }
+                }
+                &--btn {
+                    position: absolute;
+                    bottom: 25%;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 15%;
+                    padding: 15px 15px;
+                    font-family: 'Hind', sans-serif;
+                    letter-spacing: 2px;
+                    color: $white;
+                    background-color: $btn;
+                    border-radius: 3px;
+                    font-weight: 500;
+                    border: none;
+                    outline: none;
+                    transition: .2s;
+                    @media (max-width: $breakpoint-mobile-big) {
+                        width: 40%;
+                        bottom: 25%;
+                    }
+                    @media (min-width:$breakpoint-mobile-big) and (max-width: $breakpoint-tablet-small + 100px) {
+                        width: 25%;
+                    }
+                    &:hover {
+                        background-color: $btn-hover;
+                    }
+                }
+            }
+        }
+        &__indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 5%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+            li {
+                display: inline-block;
+            }
+            &--bullet {
+                color: #fff;
+                cursor: pointer;
+                display: block;
+                font-size: 35px;
+                &:hover {
+                    color: $btn;
+                }
+            }
+        }
+    }
+    &-control {
+        background: rgba(0, 0, 0, 0.28);
+        border-radius: 50px;
+        color: $snow;
+        cursor: pointer;
+        display: none;
+        font-size: 40px;
+        height: 20vh;
+        line-height: 20vh;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        text-align: center;
+        width: 40px;
+        z-index: 10;
+        transition: .3s;
+        &:hover {
+            background: $btn;
+            color: $white;
+        }
+    }
+}
+
+.carousel-inner__open:checked+.carousel-inner__item {
+    position: static;
+    opacity: 100;
+}
+
+.next {
+    right: 2%;
+}
+
+.prev {
+    left: 2%;
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+    display: block;
+}
