@@ -377,17 +377,17 @@ body {
 
 .carousel {
   position: relative;
-  margin-top: 50px;
   background-color: #151515;
   width: 98%;
-  margin: 50px auto;
+  margin: 30px auto;
   height: 80vh;
   -webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75); }
   @media (max-width: 525px) {
     .carousel {
-      height: 70vh; } }
+      height: 70vh;
+      margin: 0 auto 20px auto; } }
   .carousel-inner {
     position: relative;
     overflow: hidden;
@@ -564,5 +564,81 @@ body {
   @media (min-width: 360px) and (max-width: 768px) {
     .category-tab-carousel {
       top: 20%; } }
+
+.category-buttons {
+  margin-left: 1%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 70px;
+  grid-gap: 10px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  justify-items: center;
+  width: 97%;
+  margin: auto;
+  list-style: none;
+  padding-bottom: 20px; }
+  @media (min-width: 525px) and (max-width: 768px) {
+    .category-buttons {
+      grid-template-columns: repeat(5, 150px);
+      grid-template-rows: 60px;
+      overflow-x: scroll;
+      grid-gap: 5px; } }
+  @media (min-width: 320px) and (max-width: 525px) {
+    .category-buttons {
+      grid-template-columns: repeat(5, 120px);
+      grid-template-rows: 50px;
+      overflow-x: scroll;
+      grid-gap: 5px; } }
+  .category-buttons li {
+    width: 95%;
+    height: 100%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative; }
+    @media (min-width: 525px) and (max-width: 768px) {
+      .category-buttons li {
+        width: 90%; } }
+    .category-buttons li:hover {
+      border: 1px solid #151515; }
+    .category-buttons li p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% -50%);
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1.3rem;
+      z-index: -1; }
+  .category-buttons__btn {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+    opacity: 0;
+    backface-visibility: hidden; }
+    .category-buttons__btn.btn-1 {
+      background-image: url("../img/fitness.jpg"); }
+    .category-buttons__btn.btn-2 {
+      background-image: url("../img/nature.jpg"); }
+    .category-buttons__btn:hover {
+      transform: scale(1.1);
+      opacity: 1; }
+
+@keyframes category-buttons {
+  from {
+    opacity: 0;
+    background-size: 100%; }
+  to {
+    opacity: 1;
+    background-size: 105%; } }
 
 /*# sourceMappingURL=app.css.map */
