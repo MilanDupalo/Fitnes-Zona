@@ -16,7 +16,10 @@ body {
   grid-template-areas: "header header header" "main main aside" "footer footer footer"; }
   @media (max-width: 768px) {
     .NAME-OF-PAGE-With-sidebar {
-      display: block; } }
+      display: grid;
+      grid-template-rows: 70px auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "header header header" "main main aside" "footer footer footer"; } }
   @media (max-width: 480px) {
     .NAME-OF-PAGE-With-sidebar {
       display: block; } }
@@ -31,15 +34,21 @@ body {
 
 .home-page {
   display: grid;
-  grid-template-rows: 70px auto auto;
+  grid-template-rows: 40px auto auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "header header header" "main main main" "footer footer footer"; }
   @media (max-width: 768px) {
     .home-page {
-      display: block; } }
+      display: grid;
+      grid-template-rows: 50px auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "header header header" "main main main" "footer footer footer"; } }
   @media (max-width: 480px) {
     .home-page {
-      display: block; } }
+      display: grid;
+      grid-template-rows: 60px auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "header header header" "main main main" "footer footer footer"; } }
   .home-page header {
     grid-area: header; }
   .home-page main {
@@ -47,14 +56,23 @@ body {
   .home-page footer {
     grid-area: footer; }
 
+.blog-post {
+  width: 98%;
+  margin: auto;
+  height: 250vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 10px; }
+
 .home-page__header {
-  background-image: linear-gradient(180deg, rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0));
-  background-image: -webkit-linear-gradient(180deg, rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0));
+  background-image: linear-gradient(270deg, rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0));
+  background-image: -webkit-linear-gradient(270deg, rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0));
   color: #fff;
-  position: relative;
+  position: fixed;
   width: 100%;
-  margin-top: 20px;
-  height: 70px; }
+  z-index: 99999;
+  height: 60px; }
   .home-page__header-logo {
     left: 10px;
     right: 0;
@@ -313,6 +331,76 @@ body {
       margin: auto;
       width: 100%;
       border-bottom: 3px solid #f24137; }
+
+.blog-post__card-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background: orange;
+  grid-row-start: 1;
+  grid-row-end: 3; }
+
+.blog-post__card-2 {
+  background: orange;
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3; }
+
+.blog-post__card-3 {
+  grid-column-start: 7;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  background: orange; }
+
+.blog-post__card-4 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 7;
+  background: orange; }
+
+.blog-post__card-form {
+  grid-column-start: 7;
+  grid-column-end: 13;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  background: orange; }
+
+.blog-post__card-6 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 10;
+  background: orange; }
+
+.blog-post__card-7 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 7;
+  grid-row-end: 10;
+  background: orange; }
+
+.blog-post__card-8 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 7;
+  grid-row-end: 10;
+  background: orange; }
+
+.blog-post__card-9 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 10;
+  grid-row-end: 13;
+  background: orange; }
+
+.blog-post__card-10 {
+  grid-column-start: 7;
+  grid-column-end: 13;
+  grid-row-start: 10;
+  grid-row-end: 13;
+  background: orange; }
 
 .header-hamburger {
   cursor: pointer;
@@ -579,7 +667,7 @@ body {
   width: 97%;
   margin: auto;
   list-style: none;
-  padding-bottom: 20px; }
+  padding-bottom: 30px; }
   @media (min-width: 525px) and (max-width: 768px) {
     .category-buttons {
       grid-template-columns: repeat(5, 150px);
@@ -622,7 +710,7 @@ body {
     background: transparent;
     background-size: cover;
     background-position: center;
-    transition: all 0.5s ease;
+    transition: all 0.7s ease;
     opacity: 0;
     backface-visibility: hidden; }
     .category-buttons__btn.btn-1 {

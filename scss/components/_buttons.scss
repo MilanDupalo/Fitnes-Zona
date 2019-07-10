@@ -12,7 +12,7 @@
     width: 97%;
     margin: auto;
     list-style: none;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $breakpoint-tablet) {
         grid-template-columns: repeat(5, 150px);
         grid-template-rows: 60px;
@@ -58,7 +58,7 @@
         background: transparent;
         background-size: cover;
         background-position: center;
-        transition: all 0.5s ease;
+        transition: all 0.7s ease;
         opacity: 0;
         backface-visibility: hidden;
         &.btn-1 {

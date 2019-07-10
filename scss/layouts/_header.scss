@@ -1,10 +1,10 @@
 .home-page__header {
     @include nav-bg;
     color: $white;
-    position: relative;
+    position: fixed;
     width: 100%;
-    margin-top: 20px;
-    height: 70px;
+    z-index: 99999;
+    height: 60px;
     &-logo {
         left: 10px;
         right: 0;
