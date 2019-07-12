@@ -1,11 +1,9 @@
 .category-buttons {
     margin-left: 1%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 70px;
-    grid-gap: 10px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 70px 70px;
+    grid-gap: 15px 5px;
     position: relative;
     margin-bottom: 20px;
     justify-items: center;
@@ -14,16 +12,14 @@
     list-style: none;
     padding-bottom: 30px;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $breakpoint-tablet) {
-        grid-template-columns: repeat(5, 150px);
-        grid-template-rows: 60px;
-        overflow-x: scroll;
-        grid-gap: 5px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 60px 60px;
+        grid-gap: 15px 5px;
     }
     @media (min-width: $breakpoint-mobile-small-1) and (max-width: $breakpoint-mobile-big) {
-        grid-template-columns: repeat(5, 120px);
-        grid-template-rows: 50px;
-        overflow-x: scroll;
-        grid-gap: 5px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 50px 50px 50px;
+        grid-gap: 10px 5px;
     }
     li {
         width: 95%;
@@ -47,6 +43,14 @@
             color: $white;
             font-size: 1.3rem;
             z-index: -1;
+            width: 95%;
+            text-align: center;
+            @media (min-width: $breakpoint-mobile-small-1) and (max-width: $breakpoint-mobile-big) {
+                font-size: 1rem;
+            }
+            @media (min-width: $breakpoint-mobile-big) and (max-width: $breakpoint-tablet-small) {
+                font-size: 1.1rem;
+            }
         }
     }
     &__btn {

@@ -1,15 +1,10 @@
 .category-tab-carousel {
     font-size: 1rem;
-    padding: 1px 10px;
-    color: $white;
-    border: 1px solid $white;
     position: absolute;
-    border-radius: 3px;
     top: 20%;
+    @include tab;
     @include horisontal-center;
     width: 50px;
-    text-align: center;
-    font-weight: 200;
     @media (min-width: $breakpoint-mobile-small) and (max-width: $breakpoint-tablet) {
         top: 20%;
     }

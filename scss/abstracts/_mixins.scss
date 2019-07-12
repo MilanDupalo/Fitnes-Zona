@@ -50,3 +50,26 @@
     justify-content: space-around;
     height: 50%;
 }
+
+@mixin btn {
+    font-family: 'Hind', sans-serif;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    transition: .2s;
+    &:hover {
+        background-color: $btn-hover;
+        color: $white;
+    }
+}
+
+@mixin tab {
+    padding: 1px 10px;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: 200;
+}
