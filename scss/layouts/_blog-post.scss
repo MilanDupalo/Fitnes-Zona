@@ -1,7 +1,7 @@
 .blog-post__card-1 {
     grid-column-start: 1;
     grid-column-end: 4;
-    background: orange;
+    background-color: $dark-1;
     grid-row-start: 1;
     grid-row-end: 3;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
@@ -13,7 +13,6 @@
 }
 
 .blog-post__card-2 {
-    background: orange;
     grid-column-start: 4;
     grid-column-end: 7;
     grid-row-start: 1;
@@ -31,7 +30,7 @@
     grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 5;
-    background: orange;
+    background-color: $dark-1;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-column-start: 1;
         grid-column-end: 7;
@@ -45,7 +44,7 @@
     grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end: 7;
-    background: orange;
+    background-color: $dark-1;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-column-start: 1;
         grid-column-end: 7;
@@ -59,7 +58,7 @@
     grid-column-end: 13;
     grid-row-start: 5;
     grid-row-end: 7;
-    background: orange;
+    background-color: $dark-1;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-column-start: 7;
         grid-column-end: 13;
@@ -73,7 +72,7 @@
     grid-column-end: 5;
     grid-row-start: 7;
     grid-row-end: 10;
-    background: orange;
+    background-color: $dark-1;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-column-start: 7;
         grid-column-end: 13;
@@ -87,7 +86,7 @@
     grid-column-end: 9;
     grid-row-start: 7;
     grid-row-end: 10;
-    background: orange;
+    background-color: $dark-1;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-column-start: 1;
         grid-column-end: 7;
@@ -101,7 +100,7 @@
     grid-column-end: 13;
     grid-row-start: 7;
     grid-row-end: 10;
-    background: orange;
+    background-color: $dark-1;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-column-start: 7;
         grid-column-end: 13;
@@ -115,7 +114,7 @@
     grid-column-end: 7;
     grid-row-start: 10;
     grid-row-end: 13;
-    background: orange;
+    background-color: $dark-1;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-column-start: 1;
         grid-column-end: 7;
@@ -129,7 +128,7 @@
     grid-column-end: 13;
     grid-row-start: 10;
     grid-row-end: 13;
-    background: orange;
+    background-color: $dark-1;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-column-start: 7;
         grid-column-end: 13;
@@ -169,8 +168,11 @@
             position: absolute;
             width: 100%;
             bottom: 0;
-            height: 60%;
+            height: auto;
             transition: all 0.4s ease;
+            @media (max-height: $height-breakpoint-rotate-mobile) {
+                height: 87%;
+            }
             &-tab {
                 font-size: 1rem;
                 position: absolute;
@@ -186,6 +188,9 @@
                 font-size: 1.5rem;
                 font-weight: bold;
                 letter-spacing: 1px;
+                @media (max-height: $height-breakpoint-rotate-mobile) {
+                    font-size: 1rem;
+                }
             }
             &-btn {
                 @include btn;

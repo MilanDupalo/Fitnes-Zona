@@ -1,0 +1,56 @@
+.blog-post__card-form-content {
+    @include center-absolute;
+    height: 50%;
+    width: 90%;
+    text-align: center;
+    @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
+        top: 30%;
+    }
+    &--tittle {
+        color: white;
+        font-size: 2rem;
+        @media (max-height: $height-breakpoint-rotate-mobile) {
+            font-size: 1rem;
+        }
+    }
+    &--form-group {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $big-screen-1) {
+            flex-direction: column;
+        }
+        &-input {
+            width: 43%;
+            height: 40px;
+            padding-left: 2%;
+            background: transparent;
+            border: 1px solid grey;
+            outline: none;
+            border-radius: 3px;
+            color: $white;
+            font-family: 'Hind', sans-serif;
+            @media (max-width: $big-screen-1) {
+                width: 97%;
+                margin-top: 10px;
+            }
+            @media (max-height: $height-breakpoint-rotate-mobile) {
+                height: 25px;
+            }
+            &:focus {
+                background-color: $white;
+                color: $bg;
+            }
+        }
+    }
+    &--btn {
+        @include btn;
+        margin-top: 10px;
+        width: 100%;
+        height: 40px;
+        background-color: $btn;
+        color: $white;
+        @media (max-height: $height-breakpoint-rotate-mobile) {
+            height: 25px;
+        }
+    }
+}
