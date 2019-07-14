@@ -5,7 +5,9 @@
 @import 'layouts/header';
 @import 'layouts/nav';
 @import 'layouts/blog-post';
+@import 'layouts/footer';
 @import 'pages/home';
+@import 'pages/single-post';
 @import 'components/icons';
 @import 'components/social-hover-icons';
 @import 'components/carousel';
@@ -15,3 +17,4 @@
 @import 'components/animations';
 @import 'components/featured';
 @import 'components/forms';
+@import 'components/bottom-gallery';

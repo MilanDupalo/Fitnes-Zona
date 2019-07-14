@@ -27,31 +27,7 @@
 }
 
 .home-page {
-    display: grid;
-    grid-template-rows: 40px auto auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "header header header""main main main""footer footer footer";
-    @media(max-width: 768px) {
-        display: grid;
-        grid-template-rows: 50px auto auto;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header""main main main""footer footer footer";
-    }
-    @media(max-width: 480px) {
-        display: grid;
-        grid-template-rows: 60px auto auto;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header""main main main""footer footer footer";
-    }
-    header {
-        grid-area: header;
-    }
-    main {
-        grid-area: main;
-    }
-    footer {
-        grid-area: footer;
-    }
+    @include grid-without-sidebar;
 }
 
 .blog-post {
@@ -65,6 +41,7 @@
     margin-bottom: 30px;
     @media (max-width: $breakpoint-mobile-big) {
         display: block;
+        height: auto;
     }
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-template-rows: repeat(10, 1fr);
