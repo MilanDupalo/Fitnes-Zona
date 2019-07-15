@@ -216,6 +216,8 @@ body {
   right: 0px;
   bottom: 0px;
   z-index: -1; }
+  .nav-bar.open {
+    display: block; }
   .nav-bar h2 {
     position: absolute;
     top: 50%;
@@ -472,7 +474,8 @@ body {
 .blog-post__card {
   position: relative;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background: rgba(21, 21, 21, 0.1); }
   @media (max-width: 525px) {
     .blog-post__card {
       height: 380px;
@@ -486,12 +489,13 @@ body {
     overflow: hidden;
     border-radius: 1px; }
     .blog-post__card-content-img {
+      position: absolute;
       width: 100%;
       height: 100%;
       background-position: center;
       background-size: cover;
-      position: absolute;
-      transition: all 0.4s ease; }
+      transition: all 0.4s ease;
+      z-index: -1; }
     .blog-post__card-content-description {
       position: relative;
       color: #fff;
@@ -640,6 +644,14 @@ body {
       margin: auto;
       width: 100%;
       border-bottom: 3px solid #f24137; }
+
+.single-post__content {
+  width: 80%;
+  height: 200vh;
+  margin: auto;
+  background: #fff;
+  margin-top: -120px;
+  position: relative; }
 
 .header-hamburger {
   cursor: pointer;
@@ -1307,5 +1319,49 @@ body {
 .bottom-gallery-card:hover .bottom-gallery-card__inst-icon {
   opacity: 1;
   transform: scale(1) translate(-50%, -50%); }
+
+.under-header-banner {
+  height: 80vh;
+  width: 100%;
+  background: rgba(21, 21, 21, 0.4);
+  position: relative; }
+  .under-header-banner__content {
+    position: absolute;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 25%; }
+    .under-header-banner__content--date {
+      text-transform: uppercase;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 15px; }
+    .under-header-banner__content--tittle {
+      font-size: 3rem;
+      color: white;
+      width: 40%;
+      margin: auto;
+      margin-bottom: 20px;
+      text-align: center; }
+    .under-header-banner__content--line {
+      width: 130px;
+      height: 2px;
+      background-color: #fff;
+      margin: auto; }
+  .under-header-banner--img {
+    text-align: start;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  .under-header-banner__opacity {
+    height: 35vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(0deg, #151515, rgba(21, 21, 21, 0));
+    background-image: -web-kit-linear-gradient(0deg, #151515, rgba(21, 21, 21, 0)); }
 
 /*# sourceMappingURL=app.css.map */
