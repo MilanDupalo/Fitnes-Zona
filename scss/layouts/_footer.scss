@@ -18,6 +18,7 @@
         justify-content: space-between;
         @media (max-width: $big-screen-1) {
             width: 100%;
+            justify-content: center;
         }
         a {
             color: $white;
@@ -27,6 +28,9 @@
             @media (max-width: $breakpoint-mobile-big) {
                 margin-right: 20px;
                 justify-content: center;
+            }
+            @media (max-width: $big-screen-1) {
+                margin-right: 20px;
             }
         }
         a:after {

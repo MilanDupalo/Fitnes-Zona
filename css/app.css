@@ -583,7 +583,8 @@ body {
     justify-content: space-between; }
     @media (max-width: 1000px) {
       .footer-category {
-        width: 100%; } }
+        width: 100%;
+        justify-content: center; } }
     .footer-category a {
       color: #fff;
       text-decoration: none;
@@ -593,6 +594,9 @@ body {
         .footer-category a {
           margin-right: 20px;
           justify-content: center; } }
+      @media (max-width: 1000px) {
+        .footer-category a {
+          margin-right: 20px; } }
     .footer-category a:after {
       content: "";
       display: block;
@@ -647,11 +651,55 @@ body {
 
 .single-post__content {
   width: 80%;
-  height: 200vh;
   margin: auto;
   background: #fff;
   margin-top: -120px;
+  margin-bottom: 30px;
   position: relative; }
+  @media (max-width: 525px) {
+    .single-post__content {
+      width: 100%; } }
+  @media (min-width: 525px) and (max-width: 1000px) {
+    .single-post__content {
+      width: 90%; } }
+  .single-post__content--description {
+    padding: 10% 0; }
+    .single-post__content--description p {
+      margin: 0 16%; }
+      @media (max-width: 1000px) {
+        .single-post__content--description p {
+          margin: 0 5%; } }
+    .single-post__content--description h1 {
+      margin: 0 16%;
+      padding: 30px 0; }
+      @media (max-width: 1000px) {
+        .single-post__content--description h1 {
+          margin: 0 5%; } }
+    .single-post__content--description ul {
+      margin: 20px 16%;
+      font-size: 1.4rem; }
+      .single-post__content--description ul li {
+        margin: 0 11%;
+        font-size: 1rem; }
+      @media (max-width: 1000px) {
+        .single-post__content--description ul {
+          margin: 0 10%; } }
+    .single-post__content--description-first-letter {
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 5px;
+      float: left;
+      line-height: 35px;
+      font-size: 4rem;
+      font-family: Hind, sans-serif;
+      font-style: normal; }
+    .single-post__content--description-card {
+      margin: 30px 0; }
+      .single-post__content--description-card--img {
+        width: 100%; }
+      .single-post__content--description-card--text {
+        text-align: center;
+        font-size: .8rem; }
 
 .header-hamburger {
   cursor: pointer;
@@ -1345,6 +1393,14 @@ body {
       margin: auto;
       margin-bottom: 20px;
       text-align: center; }
+      @media (max-width: 525px) {
+        .under-header-banner__content--tittle {
+          width: 90%;
+          font-size: 2rem; } }
+      @media (min-width: 525px) and (max-width: 1000px) {
+        .under-header-banner__content--tittle {
+          width: 80%;
+          font-size: 2.5rem; } }
     .under-header-banner__content--line {
       width: 130px;
       height: 2px;

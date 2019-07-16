@@ -1,8 +1,61 @@
 .single-post__content {
     width: 80%;
-    height: 200vh;
     margin: auto;
     background: $white;
     margin-top: -120px;
+    margin-bottom: 30px;
     position: relative;
+    @media (max-width: $breakpoint-mobile-big) {
+        width: 100%;
+    }
+    @media (min-width:$breakpoint-mobile-big) and (max-width:$big-screen-1) {
+        width: 90%;
+    }
+    &--description {
+        padding: 10% 0;
+        p {
+            margin: 0 16%;
+            @media (max-width: $big-screen-1) {
+                margin: 0 5%;
+            }
+        }
+        h1 {
+            margin: 0 16%;
+            padding: 30px 0;
+            @media (max-width: $big-screen-1) {
+                margin: 0 5%;
+            }
+        }
+        ul {
+            margin: 20px 16%;
+            font-size: 1.4rem;
+            li {
+                margin: 0 11%;
+                font-size: 1rem;
+            }
+            @media (max-width:$big-screen-1) {
+                margin: 0 10%;
+            }
+        }
+        &-first-letter {
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 5px;
+            float: left;
+            line-height: 35px;
+            font-size: 4rem;
+            font-family: Hind, sans-serif;
+            font-style: normal;
+        }
+        &-card {
+            margin: 30px 0;
+            &--img {
+                width: 100%;
+            }
+            &--text {
+                text-align: center;
+                font-size: .8rem;
+            }
+        }
+    }
 }
