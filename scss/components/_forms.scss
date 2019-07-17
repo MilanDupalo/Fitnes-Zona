@@ -79,6 +79,7 @@
             text-align: center;
             color: $white;
             letter-spacing: 3px;
+            font-size: 1rem;
         }
         &--text {
             text-align: center;
@@ -110,7 +111,8 @@
         &--form {
             display: flex;
             align-items: flex-end;
-            width: 100%;
+            width: 90%;
+            margin: auto;
             justify-content: space-around;
             @media (max-width: $big-screen) {
                 display: block;

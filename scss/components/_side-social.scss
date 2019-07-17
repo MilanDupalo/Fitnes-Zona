@@ -1,0 +1,94 @@
+.side-social {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    list-style: none;
+    align-items: flex-end;
+    @media(max-width: $breakpoint-mobile-big) {
+        display: none;
+    }
+    &-twitter {
+        position: relative;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        background-color: $social-grey;
+        transition: .3s;
+        outline: none;
+        i {
+            align-self: center;
+            color: $white;
+            font-size: 1.3rem;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        &:hover {
+            width: 45px;
+            outline: 0;
+            background-color: $twt;
+        }
+    }
+    &-facebook {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        background-color: $social-grey;
+        transition: .3s;
+        i {
+            align-self: center;
+            color: $white;
+            font-size: 1.3rem;
+        }
+        &:hover {
+            width: 45px;
+            outline: 0;
+            background-color: $twt;
+        }
+    }
+    &-instagram {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        background-color: $social-grey;
+        transition: .3s;
+        i {
+            align-self: center;
+            color: $white;
+            font-size: 1.3rem;
+        }
+        &:hover {
+            width: 45px;
+            outline: 0;
+            background-color: $inst;
+        }
+    }
+    &-pin {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        background-color: $social-grey;
+        transition: .3s;
+        background-attachment: scroll;
+        i {
+            align-self: center;
+            color: $white;
+            font-size: 1.3rem;
+        }
+        &:hover {
+            width: 45px;
+            outline: 0;
+            background-color: $pin;
+        }
+    }
+}

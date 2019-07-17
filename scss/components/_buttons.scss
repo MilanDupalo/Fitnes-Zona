@@ -99,3 +99,23 @@
         padding: 20px 0;
     }
 }
+
+.all-post-btn--single-page {
+    @include btn;
+    width: 80%;
+    padding: 25px 0;
+    text-transform: uppercase;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    margin: 1% 10% 5% 10%;
+    &:hover {
+        border: 1px solid $btn;
+    }
+    @media (max-width: $big-screen-1) {
+        margin-bottom: 30px;
+        width: 90%;
+        margin-left: 5%;
+        padding: 20px 0;
+    }
+}
