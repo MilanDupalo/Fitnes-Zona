@@ -314,8 +314,14 @@
 .single-post__blog-post-card__content--description {
     position: absolute;
     width: 100%;
-    height: 60%;
+    height: 50%;
     bottom: 0;
+    @media (max-height: $height-breakpoint-rotate-mobile) {
+        height: 90%;
+    }
+    @media (max-width: $breakpoint-mobile-big) {
+        height: 70%;
+    }
     a {
         position: absolute;
         left: 15%;
@@ -327,9 +333,6 @@
     }
     a:after {
         @include underline-after;
-    }
-    a:hover:after {
-        @include underline-after-hover;
     }
     &__tab {
         font-size: 1rem;
@@ -350,4 +353,8 @@
         right: 15%;
         color: $white;
     }
+}
+
+.blog-post__card-content:hover a:after {
+    @include underline-after-hover;
 }

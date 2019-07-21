@@ -1,0 +1,39 @@
+.pagination {
+    display: -webkit-inline-box;
+    position: relative;
+    &__left {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        @include btn;
+        padding: 5px 15px;
+        background: transparent;
+        color: $white;
+        border: 1px solid $white;
+        &:hover {
+            background-color: $white;
+            color: $dark;
+        }
+    }
+    &__numbers {
+        position: absolute;
+        top: 40px;
+        color: $white;
+        letter-spacing: 5px;
+        @include vertical-center;
+    }
+    &__right {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        @include btn;
+        padding: 5px 15px;
+        background: transparent;
+        color: $white;
+        border: 1px solid $white;
+        &:hover {
+            background-color: $white;
+            color: $dark;
+        }
+    }
+}

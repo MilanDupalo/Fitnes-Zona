@@ -1,0 +1,19 @@
+.under-header-banner--all-post {
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    background: rgba(21, 21, 21, 0.4);
+}
+
+.all-post-blog-cards {
+    display: grid;
+    height: 100%;
+    width: 70%;
+    float: right;
+    grid-gap: 15px;
+    @media (max-width: $breakpoint-tablet-small + 100px) {
+        width: 90%;
+        margin: auto;
+        float: none;
+    }
+}
