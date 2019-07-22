@@ -163,3 +163,41 @@
         }
     }
 }
+
+.aside-newsletter {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    &__form {
+        width: 100%;
+        p {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            input {
+                padding: 10px 0;
+                background: transparent;
+                border: 1px solid grey;
+                outline: none;
+                border-radius: 3px;
+                color: $white;
+                font-family: 'Hind', sans-serif;
+                &:focus {
+                    background-color: $white;
+                    color: $bg;
+                }
+            }
+            label {
+                color: $white;
+            }
+        }
+        &--btn {
+            @include btn;
+            width: 100%;
+            padding: 10px 0;
+            background-color: $btn;
+            color: $white;
+        }
+    }
+}

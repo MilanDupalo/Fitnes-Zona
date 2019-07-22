@@ -53,3 +53,15 @@
 .header-hamburger:hover>.header-hamburger-third {
     width: 100%;
 }
+
+.all-post-aside-social {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    &__icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}

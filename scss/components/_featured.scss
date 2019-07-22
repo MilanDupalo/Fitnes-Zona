@@ -1,34 +1,90 @@
-.featured {
-    position: absolute;
-    z-index: 1;
-    top: 20px;
-    right: 20px;
-    background: $btn;
-    color: $white;
-    border-radius: 5px;
-    width: 30px;
-    height: 29px;
-    display: -webkit-inline-box;
-    transition: .3s;
-    &:hover {
-        width: 120px;
-    }
-    i {
-        height: 30px;
-        width: 35px;
-        vertical-align: sub;
-        margin-left: 7px;
-        cursor: pointer;
-    }
-    p {
-        opacity: 0;
-        display: flex;
-        align-items: center;
+    .featured {
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        right: 20px;
+        background: $btn;
+        color: $white;
+        border-radius: 5px;
+        width: 30px;
+        height: 29px;
+        display: -webkit-inline-box;
         transition: .3s;
-        cursor: pointer;
+        &:hover {
+            width: 120px;
+        }
+        i {
+            height: 30px;
+            width: 35px;
+            vertical-align: sub;
+            margin-left: 7px;
+            cursor: pointer;
+        }
+        p {
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            transition: .3s;
+            cursor: pointer;
+        }
     }
-}
-
-.featured:hover p {
-    opacity: 1;
-}
+    
+    .featured:hover p {
+        opacity: 1;
+    }
+    
+    .aside-featured {
+        width: 80%;
+        margin: auto;
+        &__tittle {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $snow;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            &:before,
+            &:after {
+                content: '';
+                border-top: 2px solid;
+                margin: 0 20px 0 0;
+                flex: 1 0 20px;
+                color: $social-grey;
+            }
+            &:after {
+                margin: 0 0 0 20px;
+            }
+        }
+        &__cards {
+            position: relative;
+            &--card {
+                position: relative;
+                width: 100%;
+                height: 100px;
+                margin-top: 20px;
+                &__img {
+                    height: 100%;
+                    width: 100px;
+                    border-radius: 3px;
+                }
+                &__description {
+                    position: absolute;
+                    top: 0;
+                    left: 120px;
+                    color: white;
+                    &--tittle {
+                        font-size: 1rem;
+                        &:hover {
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                    &--date {
+                        color: $modals-letter;
+                    }
+                }
+            }
+        }
+    }
