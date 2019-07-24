@@ -63,18 +63,19 @@
     }
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-template-rows: repeat(10, 1fr);
-        height: 220vh;
+        height: 300vh;
     }
 }
 
 .single-post__blog-post {
-    width: 80%;
+    width: 70%;
     height: 120vh;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
+    margin-bottom: 20px;
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
@@ -84,6 +85,6 @@
     @media (max-width: $breakpoint-mobile-big) {
         display: block;
         height: auto;
-        width: 90%;
+        width: 98%;
     }
 }

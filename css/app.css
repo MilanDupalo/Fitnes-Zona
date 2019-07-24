@@ -90,16 +90,17 @@ body {
   @media (min-width: 525px) and (max-width: 1000px) {
     .blog-post {
       grid-template-rows: repeat(10, 1fr);
-      height: 220vh; } }
+      height: 300vh; } }
 
 .single-post__blog-post {
-  width: 80%;
+  width: 70%;
   height: 120vh;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 10px; }
+  grid-gap: 10px;
+  margin-bottom: 20px; }
   @media (min-width: 525px) and (max-width: 1000px) {
     .single-post__blog-post {
       grid-template-rows: repeat(3, 1fr);
@@ -110,7 +111,7 @@ body {
     .single-post__blog-post {
       display: block;
       height: auto;
-      width: 90%; } }
+      width: 98%; } }
 
 .home-page__header {
   background-image: linear-gradient(270deg, rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0));
@@ -899,6 +900,54 @@ body {
           color: #fff;
           text-decoration: none; }
 
+.about-content {
+  width: 80%;
+  margin: auto;
+  background: #fff;
+  margin-top: -120px;
+  margin-bottom: 30px;
+  position: relative; }
+
+.about_and_contact-galery {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 200px; }
+  .about_and_contact-galery__left {
+    position: relative;
+    width: 300px;
+    justify-self: center;
+    align-self: center; }
+    .about_and_contact-galery__left--card {
+      position: relative; }
+      .about_and_contact-galery__left--card__icon {
+        width: 50%;
+        opacity: .1; }
+      .about_and_contact-galery__left--card__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-17%, -50%);
+        font-size: 2rem;
+        width: 100%;
+        color: #fff;
+        line-height: 130%; }
+        .about_and_contact-galery__left--card__text h1 {
+          font-weight: 600;
+          color: snow;
+          font-size: 1.8rem; }
+  .about_and_contact-galery__right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 180px;
+    grid-gap: 10px;
+    align-self: center; }
+
+.last-two {
+  display: -webkit-inline-box; }
+
 .under-header-banner--all-post {
   width: 100%;
   height: 80vh;
@@ -946,7 +995,7 @@ body {
       height: 100px !important; }
 
 .single-post__content {
-  width: 80%;
+  width: 70%;
   margin: auto;
   background: #fff;
   margin-top: -120px;
@@ -964,18 +1013,18 @@ body {
   .single-post__content--description {
     padding: 5% 0; }
     .single-post__content--description p {
-      margin: 0 16%; }
+      margin: 0 10%; }
       @media (max-width: 1000px) {
         .single-post__content--description p {
           margin: 0 5%; } }
     .single-post__content--description h1 {
-      margin: 0 16%;
+      margin: 0 10%;
       padding: 30px 0; }
       @media (max-width: 1000px) {
         .single-post__content--description h1 {
           margin: 0 5%; } }
     .single-post__content--description ul {
-      margin: 20px 16%;
+      margin: 20px 10%;
       font-size: 1.4rem; }
       .single-post__content--description ul li {
         margin: 0 11%;
@@ -996,6 +1045,9 @@ body {
       margin: 30px 0; }
       .single-post__content--description-card--img {
         width: 100%; }
+        @media (min-width: 800px) and (max-width: 2560px) {
+          .single-post__content--description-card--img {
+            height: 700px; } }
       .single-post__content--description-card--text {
         text-align: center;
         font-size: .8rem; }
@@ -1395,13 +1447,13 @@ body {
   outline: none;
   transition: .2s;
   cursor: pointer;
-  width: 80%;
+  width: 70%;
   padding: 25px 0;
   text-transform: uppercase;
   color: white;
   background: transparent;
   border: 1px solid white;
-  margin: 1% 10% 5% 10%; }
+  margin: 1% 15% 5% 15%; }
   .all-post-btn--single-page:hover {
     background-color: #d62e25;
     color: #fff; }
@@ -1411,7 +1463,7 @@ body {
     .all-post-btn--single-page {
       margin-bottom: 30px;
       width: 90%;
-      margin-left: 5%;
+      margin: 0 5% 10% 5%;
       padding: 20px 0; } }
 
 .all-post-category-buttons {
@@ -1525,9 +1577,6 @@ body {
   @media (min-width: 525px) and (max-width: 1000px) {
     .blog-post__card-form-content {
       top: 30%; } }
-  @media (max-width: 525px) {
-    .blog-post__card-form-content {
-      top: 35%; } }
   .blog-post__card-form-content--tittle {
     color: white;
     font-size: 1.8rem;
@@ -2012,5 +2061,8 @@ body {
     .pagination__right:hover {
       background-color: #fff;
       color: #151515; }
+
+.umargin {
+  margin-left: 10px; }
 
 /*# sourceMappingURL=app.css.map */

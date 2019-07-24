@@ -102,20 +102,20 @@
 
 .all-post-btn--single-page {
     @include btn;
-    width: 80%;
+    width: 70%;
     padding: 25px 0;
     text-transform: uppercase;
     color: white;
     background: transparent;
     border: 1px solid white;
-    margin: 1% 10% 5% 10%;
+    margin: 1% 15% 5% 15%;
     &:hover {
         border: 1px solid $btn;
     }
     @media (max-width: $big-screen-1) {
         margin-bottom: 30px;
         width: 90%;
-        margin-left: 5%;
+        margin: 0 5% 10% 5%;
         padding: 20px 0;
     }
 }

@@ -1,0 +1,56 @@
+.about-content {
+    width: 80%;
+    margin: auto;
+    background: #fff;
+    margin-top: -120px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.about_and_contact-galery {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 200px;
+    &__left {
+        position: relative;
+        width: 300px;
+        justify-self: center;
+        align-self: center;
+        &--card {
+            position: relative;
+            &__icon {
+                width: 50%;
+                opacity: .1;
+            }
+            &__text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-17%, -50%);
+                font-size: 2rem;
+                width: 100%;
+                color: $white;
+                line-height: 130%;
+                h1 {
+                    font-weight: 600;
+                    color: $snow;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+    &__right {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 180px;
+        grid-gap: 10px;
+        align-self: center;
+    }
+}
+
+.last-two {
+    display: -webkit-inline-box;
+}

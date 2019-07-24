@@ -6,9 +6,6 @@
     @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
         top: 30%;
     }
-    @media (max-width: $breakpoint-mobile-big) {
-        top: 35%;
-    }
     &--tittle {
         color: white;
         font-size: 1.8rem;
