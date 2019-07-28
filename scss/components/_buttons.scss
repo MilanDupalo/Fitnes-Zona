@@ -66,10 +66,28 @@
         opacity: 0;
         backface-visibility: hidden;
         &.btn-1 {
-            background-image: url('../img/fitness.jpg');
+            background-image: url('../img/ishrana.jpg');
         }
         &.btn-2 {
-            background-image: url('../img/nature.jpg');
+            background-image: url('../img/grupni.jpg');
+        }
+        &.btn-3 {
+            background-image: url('../img/saveti.jpg');
+        }
+        &.btn-4 {
+            background-image: url('../img/yoga.jpg');
+        }
+        &.btn-5 {
+            background-image: url('../img/crossfit.png');
+        }
+        &.btn-6 {
+            background-image: url('../img/mrsavljenje.jpg');
+        }
+        &.btn-7 {
+            background-image: url('../img/trcanje.jpg');
+        }
+        &.btn-8 {
+            background-image: url('../img/trening.jpg');
         }
         &:hover {
             transform: scale(1.1);
