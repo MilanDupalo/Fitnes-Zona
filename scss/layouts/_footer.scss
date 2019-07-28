@@ -80,6 +80,7 @@
     background-image: linear-gradient(180deg, #151515, rgba(21, 21, 21, 0.55)), url('../img/footer.jpg');
     background-position: center;
     background-size: cover;
+    padding-bottom: 30px;
     &-content {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -87,7 +88,6 @@
         margin: auto;
         margin-top: 150px;
         border: 1px solid $text;
-        margin-bottom: 30px;
         @media (max-width: $big-screen-1) {
             grid-template-columns: 1fr;
         }

@@ -1,0 +1,84 @@
+.contact-content {
+    width: 70%;
+    margin: auto;
+    background: #fff;
+    margin-bottom: 30px;
+    position: relative;
+    margin-top: -120px;
+    margin-bottom: 100px;
+    @media (max-width: $breakpoint-mobile-big) {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+    @media (min-width:$breakpoint-mobile-big) and (max-width:$big-screen-1) {
+        width: 90%;
+    }
+    &--tittle {
+        margin: 0 0 5% 15%;
+        padding-top: 5%;
+        @media (max-width: $big-screen-1) {
+            margin: 0 0 5% 5%;
+        }
+    }
+    &--form {
+        margin: 0 15%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        @media (max-width: $big-screen-1) {
+            margin: 0 5%;
+        }
+        &__input {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            @media (max-width: $big-screen-1) {
+                width: 100%;
+            }
+            label {
+                color: $dark;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            input {
+                padding: 10px 10px;
+                background: transparent;
+                border: 1px solid grey;
+                outline: none;
+                border-radius: 3px;
+                color: $dark;
+                font-family: 'Hind', sans-serif;
+                transition: 225ms;
+                &:focus {
+                    border: 1px solid $btn;
+                }
+            }
+        }
+        &__textarea {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            label {
+                color: $dark;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            textarea {
+                padding: 10px 10px;
+                background: transparent;
+                border: 1px solid grey;
+                outline: none;
+                border-radius: 3px;
+                color: $dark;
+                font-family: 'Hind', sans-serif;
+                transition: 225ms;
+                height: 200px;
+                &:focus {
+                    border: 1px solid $btn;
+                }
+            }
+        }
+    }
+}

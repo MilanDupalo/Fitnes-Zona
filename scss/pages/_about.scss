@@ -1,10 +1,112 @@
 .about-content {
-    width: 80%;
+    width: 70%;
     margin: auto;
     background: #fff;
-    margin-top: -120px;
     margin-bottom: 30px;
     position: relative;
+    margin-top: -120px;
+    margin-bottom: 100px;
+    @media (max-width: $breakpoint-mobile-big) {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+    @media (min-width:$breakpoint-mobile-big) and (max-width:$big-screen-1) {
+        width: 90%;
+    }
+    &__description {
+        padding: 5% 0;
+        &--images {
+            position: relative;
+            width: 60%;
+            margin: auto;
+            margin-bottom: 30px;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @media (max-width: $breakpoint-mobile-big) {
+                height: 180px;
+                width: 90%;
+            }
+            @media (min-width:$breakpoint-mobile-big) and (max-width:$big-screen-1) {
+                height: 250px;
+                width: 80%;
+            }
+            @media (min-width:$big-screen-1) and (max-width:$big-screen) {
+                height: 260px;
+            }
+            img {
+                height: 100%;
+                width: 45%;
+            }
+        }
+        &--underline {
+            height: 2px;
+            width: 100px;
+            background-color: $btn;
+            margin: 0 10%;
+            margin-bottom: 30px;
+            @media (max-width: $breakpoint-mobile-big) {
+                margin: 0 5%;
+                margin-bottom: 20px;
+            }
+        }
+        &--regular-text {
+            margin: 0 10%;
+            margin-bottom: 30px;
+            @media (max-width: $breakpoint-mobile-big) {
+                margin: 0 5%;
+                margin-bottom: 20px;
+            }
+        }
+        &--regular-text-first {
+            margin: 0 10%;
+            margin-bottom: 30px;
+            -webkit-column-count: 2;
+            column-count: 2;
+            -webkit-column-gap: 40px;
+            column-gap: 40px;
+            @media (max-width: $breakpoint-tablet-small+100px) {
+                -webkit-column-count: 1;
+                column-count: 1;
+            }
+            @media (max-width: $breakpoint-mobile-big) {
+                margin: 0 5%;
+                margin-bottom: 20px;
+            }
+        }
+        &--tittle {
+            margin: 0 10%;
+            padding: 30px 0;
+            @media (max-width: $breakpoint-mobile-big) {
+                margin: 0 5%;
+                padding: 20px 0;
+            }
+        }
+        &--tittle-center {
+            margin: 0 10%;
+            margin-bottom: 30px;
+            border-left: $btn 2px solid;
+            @media (max-width: $breakpoint-mobile-big) {
+                margin: 0 5%;
+                margin-bottom: 20px;
+            }
+            h2 {
+                padding: 0 10%;
+                @media (max-width: $breakpoint-mobile-big) {
+                    margin: 0 5%;
+                }
+            }
+        }
+        &--tittle-last {
+            margin: 0 10%;
+            margin-bottom: 30px;
+            @media (max-width: $breakpoint-mobile-big) {
+                margin: 0 5%;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 
 .about_and_contact-galery {
@@ -14,6 +116,9 @@
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 200px;
+    @media (max-width: $big-screen-1) {
+        grid-template-columns: auto;
+    }
     &__left {
         position: relative;
         width: 300px;
@@ -24,6 +129,14 @@
             &__icon {
                 width: 50%;
                 opacity: .1;
+                @media (max-width: $big-screen-1) {
+                    width: 30%;
+                    opacity: .1;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
             }
             &__text {
                 position: absolute;
@@ -34,23 +147,82 @@
                 width: 100%;
                 color: $white;
                 line-height: 130%;
+                @media (max-width: $big-screen-1) {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -25%);
+                    font-size: 2rem;
+                    color: #fff;
+                    line-height: 130%;
+                    text-align: center;
+                }
                 h1 {
                     font-weight: 600;
                     color: $snow;
                     font-size: 1.8rem;
+                    @media (max-width: $big-screen-1 + 250px) {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
     }
     &__right {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
         grid-template-rows: 180px;
         grid-gap: 10px;
         align-self: center;
+        @media (max-width: $breakpoint-mobile-big + 200px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @media (min-width: $breakpoint-mobile-big + 200px) and (max-width: $big-screen) {
+            grid-template-rows: 140px;
+        }
     }
 }
 
 .last-two {
-    display: -webkit-inline-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    background-image: linear-gradient(90deg, rgba(21, 21, 21, 0), #151515 93%) !important;
+    position: relative;
+    @media (max-width: $big-screen-1) {
+        background-image: none !important;
+    }
+    @media (max-width: $breakpoint-mobile-big +200px) {
+        display: flex;
+        position: relative;
+        width: 65%;
+        justify-content: space-between;
+    }
+}
+
+.about_and_contact-galery--card-1,
+.about_and_contact-galery--card-2,
+.about_and_contact-galery--card-3,
+.about_and_contact-galery--card-4 {
+    @media (max-width: $breakpoint-mobile-big + 200px) {
+        height: 120px !important;
+        width: 30% !important;
+        margin-top: 10px !important;
+    }
+}
+
+.about_and_contact-galery--card-5,
+.about_and_contact-galery--card-6 {
+    @media (max-width: $breakpoint-mobile-big + 200px) {
+        height: 120px !important;
+        width: 46% !important;
+        margin-top: 10px !important;
+    }
+}
+
+.last-two:hover .last-two-inst-button--btn {
+    opacity: 1;
+    transform: translate(-50%, -50%);
 }

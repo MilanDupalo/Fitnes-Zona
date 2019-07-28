@@ -17,10 +17,13 @@
     }
     &__numbers {
         position: absolute;
-        top: 40px;
+        top: 45px;
         color: $white;
         letter-spacing: 5px;
-        @include vertical-center;
+        left: 46%;
+        right: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__right {
         position: absolute;

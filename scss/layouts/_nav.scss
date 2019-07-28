@@ -70,7 +70,7 @@
         @include nav-list;
         width: 50%;
         left: 10%;
-        top: 20%;
+        top: 10%;
         font-size: 3rem;
         text-transform: none;
         @media (max-width: $breakpoint-mobile-big) {
@@ -96,9 +96,9 @@
     }
     &__category {
         @include nav-list;
-        width: 30%;
+        width: 40%;
         right: 15%;
-        top: 23%;
+        top: 15%;
         font-size: 1.3rem;
         @media (max-width: $breakpoint-mobile-big) {
             font-size: 1rem;
