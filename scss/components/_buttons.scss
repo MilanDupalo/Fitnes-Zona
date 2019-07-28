@@ -224,3 +224,11 @@
     background-color: $btn;
     position: relative;
 }
+
+.error--btn {
+    @include btn;
+    color: $white;
+    background-color: $btn;
+    padding: 10px 15px;
+    margin-top: 15px;
+}

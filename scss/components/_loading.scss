@@ -1,0 +1,18 @@
+#loading {
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(1px);
+    @include center-absolute;
+    h1 {
+        color: $btn;
+    }
+}
+
+.loading-icon {
+    display: inline-block;
+    margin: 6px;
+    color: $btn;
+    font-size: 3rem;
+    align-self: center;
+    animation: loading 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}

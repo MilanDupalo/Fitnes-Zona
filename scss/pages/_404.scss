@@ -1,0 +1,11 @@
+.error {
+    @include center-absolute;
+    color: $white;
+    text-align: center;
+}
+
+.img-404 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
