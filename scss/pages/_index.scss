@@ -1,0 +1,18 @@
+.index {
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include center-absolute;
+    h1 {
+        color: grey;
+        text-decoration: underline;
+    }
+    a {
+        text-transform: uppercase;
+        color: $btn;
+        text-decoration: none;
+    }
+}

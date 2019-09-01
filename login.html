@@ -31,12 +31,14 @@
             </a>
         </section>
 
+        <h1 class="login-form__title">Welcome to Fitnes Zona</h1>
+
         <article class="login-form">
-            <h1 class="login-form__title">Welcome to Fitnes Zona</h1>
 
             <section class="login-form__box">
+
+                <input class="sign-up-btn" type="radio" id="sign-up" name="carousel" aria-hidden="true" hidden="" checked="checked">
                 <section class="login-form__box--login">
-                    <h1 class="login-form__box--login__title"><i class="far fa-user-circle"></i></h1>
                     <form class="login-form__box--login__forms">
                         <p class="login-form__box--login__forms--content">
                             <label for="">Email:</label>
@@ -44,22 +46,47 @@
                         </p>
                         <p class="login-form__box--login__forms--content">
                             <label for="">Password:</label>
-                            <input type="text" name="" id="">
+                            <input type="password" name="" id="">
                         </p>
                     </form>
-
                     <p class="login-form__box--login__forgot">Forgot <a href="#"> password?</a></p>
-                    <button class="login-form__box--login__btn">Subscribe</button>
+                    <button class="login-form__box--login__btn">Log in</button>
                     <section class="login-form__box--login__error">
                         <p>Wrong email or password!</p>
                     </section>
                 </section>
 
-                <button class="signup">Sign up</button>
+                <input class="log-in-btn" type="radio" id="log-in" name="carousel">
+                <section class="login-form__box--signup">
+                    <form class="login-form__box--signup__forms">
+                        <p class="login-form__box--signup__forms--content">
+                            <label for="">First Name:</label>
+                            <input type="text" name="" id="">
+                        </p>
+                        <p class="login-form__box--signup__forms--content">
+                            <label for="">Last Name:</label>
+                            <input type="text" name="" id="">
+                        </p>
+                        <p class="login-form__box--signup__forms--content">
+                            <label for="">Email:</label>
+                            <input type="text" name="" id="">
+                        </p>
+                        <p class="login-form__box--signup__forms--content">
+                            <label for="">Password:</label>
+                            <input type="password" name="" id="">
+                        </p>
+                    </form>
+
+                    <button class="login-form__box--login__btn">Sign up</button>
+                    <section class="login-form__box--login__error">
+                        <p>Wrong email or password!</p>
+                    </section>
+                </section>
+
+                <label for="sign-up" class="btn-log btn-log-log-in">Log in</label>
+                <label for="log-in" class="btn-log btn-log-sign-up">Sign up</label>
 
             </section>
-
-
         </article>
 
 
