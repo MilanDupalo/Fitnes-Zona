@@ -1388,7 +1388,6 @@ body {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background: url("../img/1.jpg");
   background-position: center;
   background-size: cover;
   box-sizing: border-box;
@@ -1401,14 +1400,19 @@ body {
     height: 100vh;
     width: 300%;
     background-size: contain;
-    background-position: center;
-    background-repeat: repeat-x; }
+    background-position: center; }
   .login-main:before {
     background-image: url("../img/fog-1.png");
-    animation: drift 60s linear 0s infinite; }
+    animation: drift-1 100s linear 0s infinite; }
+    @media (max-width: 525px) {
+      .login-main:before {
+        animation: drift-1 10s linear 0s infinite; } }
   .login-main:after {
     background-image: url("../img/fog-2.png");
-    animation: drift 25s linear 0s infinite; }
+    animation: drift-2 60s linear 0s infinite; }
+    @media (max-width: 525px) {
+      .login-main:after {
+        animation: drift-1 10s linear 0s infinite; } }
 
 .login-form {
   position: relative;
@@ -1427,10 +1431,14 @@ body {
     text-align: center;
     background: -webkit-linear-gradient(#fff, #141414);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 9; }
     @media (max-width: 1000px) {
       .login-form__title {
-        padding: 0; } }
+        padding: 0;
+        font-size: 2rem;
+        padding-top: 20px; } }
   .login-form__box {
     box-shadow: 1px 1px 50px black;
     background-color: transparent;
@@ -1459,7 +1467,7 @@ body {
       .login-form__box--login__forms {
         width: 80%;
         margin: auto;
-        padding-top: 50px; }
+        padding-top: 100px; }
         .login-form__box--login__forms--content {
           width: 100%;
           display: flex;
@@ -1486,10 +1494,13 @@ body {
         margin: auto;
         margin-top: 10px;
         text-align: center;
-        color: grey; }
+        color: grey;
+        transition: 525ms; }
         .login-form__box--login__forgot a {
           color: grey;
           text-decoration: none; }
+          .login-form__box--login__forgot a:hover {
+            text-decoration: underline; }
       .login-form__box--login__btn {
         padding: 10px;
         width: 50%;
@@ -1503,7 +1514,8 @@ body {
         color: grey;
         text-transform: uppercase;
         font-weight: bold;
-        letter-spacing: 1px; }
+        letter-spacing: 1px;
+        cursor: pointer; }
         .login-form__box--login__btn:hover {
           background: #f24137;
           color: #fff; }
@@ -2174,11 +2186,16 @@ body {
     transform: scale(0.95); }
   100% {
     transform: scale(0.9); } }
-@keyframes drift {
+@keyframes drift-1 {
   from {
     transform: translate3d(0, 0, 0); }
   to {
     transform: translate3d(-200vw, 0, 0); } }
+@keyframes drift-2 {
+  from {
+    transform: translate3d(-200vw, 0, 0); }
+  to {
+    transform: translate3d(0, 0, 0); } }
 .featured {
   position: absolute;
   z-index: 1;
@@ -2616,7 +2633,7 @@ body {
   top: 40%;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 9;
   list-style: none;
   align-items: flex-end; }
   @media (max-width: 525px) {
