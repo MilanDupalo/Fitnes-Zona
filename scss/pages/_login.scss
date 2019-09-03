@@ -255,3 +255,63 @@
 #sign-up:checked-.btn-log {
     display: block;
 }
+
+.reset-box {
+    position: absolute;
+    height: 30vh;
+    width: 40%;
+    background: #151515;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 50px black;
+    border-radius: 3px;
+    &__form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding-top: 30px;
+        label {
+            text-align: center;
+            color: grey;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input {
+            border: none;
+            padding: 5px;
+            outline: none;
+            border-bottom: 1px solid $dark-1;
+            background: transparent;
+            color: $white;
+            transition: 525ms;
+            &:focus {
+                border-bottom: 2px solid $btn;
+            }
+        }
+    }
+    &__btn {
+        padding: 10px;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 30px;
+        border-radius: 100px;
+        background: transparent;
+        outline: none;
+        border: 2px solid $btn;
+        transition: 225ms;
+        color: grey;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        cursor: pointer;
+        &:hover {
+            background: $btn;
+            color: $white;
+        }
+    }
+}
