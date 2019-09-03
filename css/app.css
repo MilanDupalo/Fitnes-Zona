@@ -1385,17 +1385,42 @@ body {
   border-bottom: 1px solid grey; }
 
 .login-main {
+  position: absolute;
   width: 100%;
   height: 100vh;
-  background: url("../img/1.jpg"); }
+  background: url("../img/1.jpg");
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden; }
+  .login-main:before, .login-main:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-x; }
+  .login-main:before {
+    background-image: url("../img/fog-1.png");
+    animation: drift 60s linear 0s infinite; }
+  .login-main:after {
+    background-image: url("../img/fog-2.png");
+    animation: drift 25s linear 0s infinite; }
 
 .login-form {
   position: relative;
   width: 100%;
   margin: 50px auto;
-  height: 50vh; }
+  height: 50vh;
+  z-index: 1; }
+  @media (max-width: 1000px) {
+    .login-form {
+      margin: auto; } }
   .login-form__title {
-    padding-top: 10vh;
+    padding-top: 5vh;
     color: #fff;
     font-size: 3rem;
     letter-spacing: 2.5px;
@@ -1403,6 +1428,9 @@ body {
     background: -webkit-linear-gradient(#fff, #141414);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+    @media (max-width: 1000px) {
+      .login-form__title {
+        padding: 0; } }
   .login-form__box {
     box-shadow: 1px 1px 50px black;
     background-color: transparent;
@@ -1416,6 +1444,12 @@ body {
     transition: transform 0.8s;
     transform-style: preserve-3d;
     overflow: hidden; }
+    @media (min-width: 1000px) and (max-width: 2560px) {
+      .login-form__box {
+        width: 40%; } }
+    @media (max-width: 1000px) {
+      .login-form__box {
+        width: 300px; } }
     .login-form__box--login {
       width: 100%;
       background-color: #151515;
@@ -1557,9 +1591,6 @@ body {
   opacity: 100; }
 
 #sign-up:checked-.btn-log {
-  display: block; }
-
-#log-in:checked-.btn-log {
   display: block; }
 
 .index {
@@ -2143,6 +2174,11 @@ body {
     transform: scale(0.95); }
   100% {
     transform: scale(0.9); } }
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(-200vw, 0, 0); } }
 .featured {
   position: absolute;
   z-index: 1;
