@@ -1519,6 +1519,10 @@ body {
         .login-form__box--login__btn:hover {
           background: #f24137;
           color: #fff; }
+        @media (max-width: 1000px) {
+          .login-form__box--login__btn {
+            width: 90%;
+            margin-left: 5%; } }
       .login-form__box--login__error {
         position: absolute;
         bottom: 0;
@@ -1607,7 +1611,7 @@ body {
 
 .reset-box {
   position: absolute;
-  height: 30vh;
+  height: 230px;
   width: 40%;
   background: #151515;
   z-index: 9;
@@ -1616,6 +1620,19 @@ body {
   transform: translate(-50%, -50%);
   box-shadow: 1px 1px 50px black;
   border-radius: 3px; }
+  @media (min-width: 1000px) and (max-width: 2560px) {
+    .reset-box {
+      width: 40%; } }
+  @media (max-width: 1000px) {
+    .reset-box {
+      width: 300px; } }
+  .reset-box__xmark {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.3rem;
+    color: #f24137;
+    cursor: pointer; }
   .reset-box__form {
     width: 80%;
     display: flex;
@@ -1657,6 +1674,10 @@ body {
     .reset-box__btn:hover {
       background: #f24137;
       color: #fff; }
+    @media (max-width: 1000px) {
+      .reset-box__btn {
+        width: 90%;
+        margin-left: 5%; } }
 
 .index {
   width: 300px;

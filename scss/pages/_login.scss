@@ -148,6 +148,10 @@
                     background: $btn;
                     color: $white;
                 }
+                @media (max-width:$big-screen-1) {
+                    width: 90%;
+                    margin-left: 5%;
+                }
             }
             &__error {
                 position: absolute;
@@ -258,7 +262,7 @@
 
 .reset-box {
     position: absolute;
-    height: 30vh;
+    height: 230px;
     width: 40%;
     background: #151515;
     z-index: 9;
@@ -267,6 +271,20 @@
     transform: translate(-50%, -50%);
     box-shadow: 1px 1px 50px black;
     border-radius: 3px;
+    @media (min-width: $big-screen-1) and (max-width: $big-screen-2) {
+        width: 40%;
+    }
+    @media(max-width:$big-screen-1) {
+        width: 300px;
+    }
+    &__xmark {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 1.3rem;
+        color: $btn;
+        cursor: pointer;
+    }
     &__form {
         width: 80%;
         display: flex;
@@ -312,6 +330,10 @@
         &:hover {
             background: $btn;
             color: $white;
+        }
+        @media (max-width:$big-screen-1) {
+            width: 90%;
+            margin-left: 5%;
         }
     }
 }
