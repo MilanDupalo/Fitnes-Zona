@@ -1442,22 +1442,24 @@ body {
   .login-form__box {
     box-shadow: 1px 1px 50px black;
     background-color: transparent;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 300px;
     height: 450px;
-    perspective: 1000px;
     border-radius: 3px;
-    margin: auto;
-    margin-top: 20px;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: 225ms; }
     @media (min-width: 1000px) and (max-width: 2560px) {
       .login-form__box {
         width: 40%; } }
     @media (max-width: 1000px) {
       .login-form__box {
         width: 300px; } }
+    .login-form__box.slip {
+      transform: translate(-50%, 100%);
+      opacity: 0; }
     .login-form__box--login {
       width: 100%;
       background-color: #151515;
@@ -1491,16 +1493,16 @@ body {
               border-bottom: 2px solid #f24137; }
       .login-form__box--login__forgot {
         width: 80%;
-        margin: auto;
-        margin-top: 10px;
-        text-align: center;
+        margin: 10px 0 0 10%;
+        text-align: end;
+        background: transparent;
         color: grey;
-        transition: 525ms; }
-        .login-form__box--login__forgot a {
-          color: grey;
-          text-decoration: none; }
-          .login-form__box--login__forgot a:hover {
-            text-decoration: underline; }
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transform: 225ms; }
+        .login-form__box--login__forgot:hover {
+          color: #f24137; }
       .login-form__box--login__btn {
         padding: 10px;
         width: 50%;
@@ -1617,7 +1619,9 @@ body {
   z-index: 9;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(130%, -50%);
+  transition: 225ms;
+  opacity: 0;
   box-shadow: 1px 1px 50px black;
   border-radius: 3px; }
   @media (min-width: 1000px) and (max-width: 2560px) {
@@ -1626,13 +1630,19 @@ body {
   @media (max-width: 1000px) {
     .reset-box {
       width: 300px; } }
+  .reset-box.slip {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
   .reset-box__xmark {
     position: absolute;
     right: 10px;
     top: 10px;
     font-size: 1.3rem;
     color: #f24137;
+    transition: 225ms;
     cursor: pointer; }
+    .reset-box__xmark:hover {
+      color: #fff; }
   .reset-box__form {
     width: 80%;
     display: flex;

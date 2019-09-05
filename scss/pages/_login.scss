@@ -62,21 +62,24 @@
     &__box {
         box-shadow: 1px 1px 50px black;
         background-color: transparent;
-        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 300px;
         height: 450px;
-        perspective: 1000px;
         border-radius: 3px;
-        margin: auto;
-        margin-top: 20px;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
         overflow: hidden;
+        transition: 225ms;
         @media (min-width: $big-screen-1) and (max-width: $big-screen-2) {
             width: 40%;
         }
         @media(max-width:$big-screen-1) {
             width: 300px;
+        }
+        &.slip {
+            transform: translate(-50%, 100%);
+            opacity: 0;
         }
         &--login {
             width: 100%;
@@ -116,17 +119,16 @@
             }
             &__forgot {
                 width: 80%;
-                margin: auto;
-                margin-top: 10px;
-                text-align: center;
+                margin: 10px 0 0 10%;
+                text-align: end;
+                background: transparent;
                 color: grey;
-                transition: 525ms;
-                a {
-                    color: grey;
-                    text-decoration: none;
-                    &:hover {
-                        text-decoration: underline;
-                    }
+                border: none;
+                outline: none;
+                cursor: pointer;
+                transform: 225ms;
+                &:hover {
+                    color: $btn;
                 }
             }
             &__btn {
@@ -268,7 +270,9 @@
     z-index: 9;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(130%, -50%);
+    transition: 225ms;
+    opacity: 0;
     box-shadow: 1px 1px 50px black;
     border-radius: 3px;
     @media (min-width: $big-screen-1) and (max-width: $big-screen-2) {
@@ -277,13 +281,21 @@
     @media(max-width:$big-screen-1) {
         width: 300px;
     }
+    &.slip {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
     &__xmark {
         position: absolute;
         right: 10px;
         top: 10px;
         font-size: 1.3rem;
         color: $btn;
+        transition: 225ms;
         cursor: pointer;
+        &:hover {
+            color: $white;
+        }
     }
     &__form {
         width: 80%;

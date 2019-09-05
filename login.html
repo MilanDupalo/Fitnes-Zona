@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/177f0dcb9f.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/app.css">
     <title>login</title>
 </head>
@@ -35,7 +36,7 @@
 
         <section class="login-form">
 
-            <section class="login-form__box">
+            <section class="login-form__box" id="logbox">
 
                 <input class="sign-up-btn" type="radio" id="sign-up" name="carousel" aria-hidden="true" hidden="" checked="checked">
                 <section class="login-form__box--login">
@@ -49,7 +50,8 @@
                             <input type="password" name="" id="">
                         </p>
                     </form>
-                    <p class="login-form__box--login__forgot">Forgot <a href="#"> password?</a></p>
+                    <button class="login-form__box--login__forgot"> Forgot password?</button>
+
                     <button class="login-form__box--login__btn">Log in</button>
                     <section class="login-form__box--login__error">
                         <p>Wrong email or password!</p>
@@ -89,10 +91,10 @@
             </section>
         </section>
 
-        <section class="reset-box">
+        <section class="reset-box" id="resbox">
             <i class="far fa-times-circle reset-box__xmark"></i>
             <p class="reset-box__form">
-                <label for="reset-box__form">First Name:</label>
+                <label for="reset-box__form">Email:</label>
                 <input type="text" name="" id="">
             </p>
             <button class="reset-box__btn">reset password</button>
@@ -102,4 +104,34 @@
         </section>
 
     </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script>
+        $('.login-form__box--login__forgot').click(function() {
+            $("#logbox").toggleClass("slip");
+        });
+
+
+        $('.login-form__box--login__forgot').click(function() {
+            $("#resbox").toggleClass("slip");
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $(".reset-box__xmark").click(function() {
+                $("#logbox").removeClass("slip");
+            });
+        });
+
+        $(document).ready(function() {
+            $(".reset-box__xmark").click(function() {
+                $("#resbox").removeClass("slip");
+            });
+        });
+    </script>
+
+
+
+
 </body>
