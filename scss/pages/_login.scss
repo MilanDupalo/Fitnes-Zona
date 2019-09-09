@@ -36,11 +36,13 @@
 .login-form {
     position: relative;
     width: 100%;
-    margin: 50px auto;
+    margin: auto;
+    margin-top: 100px;
     height: 50vh;
     z-index: 1;
     @media(max-width: $big-screen-1) {
         margin: auto;
+        margin-top: 100px;
     }
     &__title {
         padding-top: 5vh;
@@ -87,10 +89,17 @@
             height: 100%;
             position: absolute;
             backface-visibility: hidden;
+            &__title {
+                text-align: center;
+                padding-top: 30px;
+                color: $btn;
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+            }
             &__forms {
                 width: 80%;
                 margin: auto;
-                padding-top: 100px;
+                padding-top: 50px;
                 &--content {
                     width: 100%;
                     display: flex;
@@ -132,14 +141,14 @@
                 }
             }
             &__btn {
-                padding: 10px;
-                width: 50%;
-                margin-left: 25%;
+                padding: 5px;
+                width: 20%;
+                margin-left: 70%;
                 margin-top: 30px;
-                border-radius: 100px;
+                border-radius: 4px;
                 background: transparent;
                 outline: none;
-                border: 2px solid $btn;
+                border: 1px solid #f24137;
                 transition: 225ms;
                 color: grey;
                 text-transform: uppercase;
@@ -151,8 +160,8 @@
                     color: $white;
                 }
                 @media (max-width:$big-screen-1) {
-                    width: 90%;
-                    margin-left: 5%;
+                    width: 80%;
+                    margin-left: 10%;
                 }
             }
             &__error {
@@ -189,7 +198,7 @@
             &__forms {
                 width: 80%;
                 margin: auto;
-                padding-top: 50px;
+                padding-top: 10px;
                 &--content {
                     width: 100%;
                     display: flex;
@@ -264,7 +273,7 @@
 
 .reset-box {
     position: absolute;
-    height: 230px;
+    height: 300px;
     width: 40%;
     background: #151515;
     z-index: 9;
@@ -325,14 +334,14 @@
         }
     }
     &__btn {
-        padding: 10px;
-        width: 50%;
-        margin-left: 25%;
+        padding: 5px;
+        width: 20%;
+        margin-left: 70%;
         margin-top: 30px;
-        border-radius: 100px;
+        border-radius: 4px;
         background: transparent;
         outline: none;
-        border: 2px solid $btn;
+        border: 1px solid #f24137;
         transition: 225ms;
         color: grey;
         text-transform: uppercase;
@@ -344,8 +353,8 @@
             color: $white;
         }
         @media (max-width:$big-screen-1) {
-            width: 90%;
-            margin-left: 5%;
+            width: 80%;
+            margin-left: 10%;
         }
     }
 }

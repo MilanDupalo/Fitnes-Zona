@@ -1417,12 +1417,14 @@ body {
 .login-form {
   position: relative;
   width: 100%;
-  margin: 50px auto;
+  margin: auto;
+  margin-top: 100px;
   height: 50vh;
   z-index: 1; }
   @media (max-width: 1000px) {
     .login-form {
-      margin: auto; } }
+      margin: auto;
+      margin-top: 100px; } }
   .login-form__title {
     padding-top: 5vh;
     color: #fff;
@@ -1466,10 +1468,16 @@ body {
       height: 100%;
       position: absolute;
       backface-visibility: hidden; }
+      .login-form__box--login__title {
+        text-align: center;
+        padding-top: 30px;
+        color: #f24137;
+        font-size: 1.4rem;
+        letter-spacing: 2px; }
       .login-form__box--login__forms {
         width: 80%;
         margin: auto;
-        padding-top: 100px; }
+        padding-top: 50px; }
         .login-form__box--login__forms--content {
           width: 100%;
           display: flex;
@@ -1504,14 +1512,14 @@ body {
         .login-form__box--login__forgot:hover {
           color: #f24137; }
       .login-form__box--login__btn {
-        padding: 10px;
-        width: 50%;
-        margin-left: 25%;
+        padding: 5px;
+        width: 20%;
+        margin-left: 70%;
         margin-top: 30px;
-        border-radius: 100px;
+        border-radius: 4px;
         background: transparent;
         outline: none;
-        border: 2px solid #f24137;
+        border: 1px solid #f24137;
         transition: 225ms;
         color: grey;
         text-transform: uppercase;
@@ -1523,8 +1531,8 @@ body {
           color: #fff; }
         @media (max-width: 1000px) {
           .login-form__box--login__btn {
-            width: 90%;
-            margin-left: 5%; } }
+            width: 80%;
+            margin-left: 10%; } }
       .login-form__box--login__error {
         position: absolute;
         bottom: 0;
@@ -1554,7 +1562,7 @@ body {
       .login-form__box--signup__forms {
         width: 80%;
         margin: auto;
-        padding-top: 50px; }
+        padding-top: 10px; }
         .login-form__box--signup__forms--content {
           width: 100%;
           display: flex;
@@ -1613,7 +1621,7 @@ body {
 
 .reset-box {
   position: absolute;
-  height: 230px;
+  height: 300px;
   width: 40%;
   background: #151515;
   z-index: 9;
@@ -1667,14 +1675,14 @@ body {
       .reset-box__form input:focus {
         border-bottom: 2px solid #f24137; }
   .reset-box__btn {
-    padding: 10px;
-    width: 50%;
-    margin-left: 25%;
+    padding: 5px;
+    width: 20%;
+    margin-left: 70%;
     margin-top: 30px;
-    border-radius: 100px;
+    border-radius: 4px;
     background: transparent;
     outline: none;
-    border: 2px solid #f24137;
+    border: 1px solid #f24137;
     transition: 225ms;
     color: grey;
     text-transform: uppercase;
@@ -1686,8 +1694,8 @@ body {
       color: #fff; }
     @media (max-width: 1000px) {
       .reset-box__btn {
-        width: 90%;
-        margin-left: 5%; } }
+        width: 80%;
+        margin-left: 10%; } }
 
 .index {
   width: 300px;
