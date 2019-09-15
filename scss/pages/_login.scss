@@ -95,11 +95,13 @@
                 color: $btn;
                 font-size: 1.4rem;
                 letter-spacing: 2px;
+                width: 70%;
+                margin: auto;
             }
             &__forms {
                 width: 80%;
                 margin: auto;
-                padding-top: 50px;
+                padding-top: 30px;
                 &--content {
                     width: 100%;
                     display: flex;
@@ -144,7 +146,7 @@
                 padding: 5px;
                 width: 20%;
                 margin-left: 70%;
-                margin-top: 30px;
+                margin-top: 20px;
                 border-radius: 4px;
                 background: transparent;
                 outline: none;
@@ -356,5 +358,14 @@
             width: 80%;
             margin-left: 10%;
         }
+    }
+    &__worning {
+        width: 76%;
+        margin: auto;
+        color: $btn;
+        font-size: .7rem;
+        margin-top: 10px;
+        line-height: 12px;
+        text-align: end;
     }
 }
