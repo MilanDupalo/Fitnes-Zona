@@ -1545,7 +1545,8 @@ body {
         background: #f24137;
         color: white;
         height: 50px;
-        text-align: center; }
+        text-align: center;
+        display: none; }
         .login-form__box--login__error p {
           display: flex;
           justify-content: center;
