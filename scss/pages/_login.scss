@@ -101,7 +101,10 @@
             &__forms {
                 width: 80%;
                 margin: auto;
-                padding-top: 30px;
+                padding-top: 70px;
+                @media (max-width: $breakpoint-mobile-big) {
+                    padding-top: 20px;
+                }
                 &--content {
                     width: 100%;
                     display: flex;
@@ -362,7 +365,7 @@
     &__worning {
         width: 76%;
         margin: auto;
-        color: $btn;
+        color: grey;
         font-size: .7rem;
         margin-top: 10px;
         line-height: 12px;

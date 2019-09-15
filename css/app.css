@@ -1479,7 +1479,10 @@ body {
       .login-form__box--login__forms {
         width: 80%;
         margin: auto;
-        padding-top: 30px; }
+        padding-top: 70px; }
+        @media (max-width: 525px) {
+          .login-form__box--login__forms {
+            padding-top: 20px; } }
         .login-form__box--login__forms--content {
           width: 100%;
           display: flex;
@@ -1701,7 +1704,7 @@ body {
   .reset-box__worning {
     width: 76%;
     margin: auto;
-    color: #f24137;
+    color: grey;
     font-size: .7rem;
     margin-top: 10px;
     line-height: 12px;
