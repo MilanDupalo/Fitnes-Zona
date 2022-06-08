@@ -1,169 +1,92 @@
 .footer {
+  background-image: linear-gradient(180deg, #151515, rgba(21, 21, 21, 0.55)),
+    url("../img/footer.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 30px;
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 90%;
     margin: auto;
-    position: relative;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-top: 150px;
+    border: 1px solid $text;
     @media (max-width: $big-screen-1) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      grid-template-columns: 1fr;
     }
-    &-category {
-        width: 50%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        @media (max-width: $big-screen-1) {
-            width: 100%;
-            justify-content: center;
-        }
-        a {
-            color: $white;
-            text-decoration: none;
-            text-transform: uppercase;
-            margin-top: 10px;
-            @media (max-width: $breakpoint-mobile-big) {
-                margin-right: 20px;
-                justify-content: center;
-            }
-            @media (max-width: $big-screen-1) {
-                margin-right: 20px;
-            }
-        }
-        a:after {
-            @include underline-after;
-        }
-        a:hover:after {
-            @include underline-after-hover;
-        }
+    h1 {
+      font-size: 1.5rem;
+      color: $white;
+      margin-bottom: 20px;
     }
-    &-social {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-        @media (max-width: $big-screen-1) {
-            width: 100%;
-            justify-content: center;
-            margin-top: 30px;
-        }
-    }
-    &-copyright {
-        width: 50%;
+    &--box-1 {
+      padding: 20px;
+      border-right: 1px solid $text;
+      @media (max-width: $big-screen-1) {
+        border-right: none;
+        border-bottom: 1px solid $text;
+        text-align: center;
+      }
+      p {
         color: $text;
-        display: flex;
-        margin-top: 20px;
+        padding-bottom: 40px;
+      }
+      a {
+        color: $text;
+        text-decoration: none;
+        margin-top: 10%;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &--box-2 {
+      padding: 20px;
+      border-right: 1px solid $text;
+      h1 {
+        text-align: center;
+      }
+      @media (max-width: $big-screen-1) {
+        border-right: none;
+        border-bottom: 1px solid $text;
+      }
+    }
+    &--box-3 {
+      text-align: end;
+      @media (max-width: $big-screen-1) {
+        text-align: center;
+      }
+      &__category {
+        padding: 20px;
+        border-bottom: 1px solid $text;
+        height: 55%;
+        a {
+          color: $text;
+          text-decoration: none;
+          margin-right: 10px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      &__copy-right {
+        padding: 10px;
         @media (max-width: $big-screen-1) {
-            width: 100%;
-            margin-top: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        p {
+          color: $text;
+          @media (max-width: $big-screen-1) {
+            margin: 0px 10px;
+          }
         }
         a {
-            color: $white;
-            text-transform: none;
-            text-decoration: none;
-            margin: 0 10px;
+          color: $white;
+          text-decoration: none;
         }
-        a:after {
-            @include underline-after;
-        }
-        a:hover:after {
-            @include underline-after-hover;
-        }
+      }
     }
-}
-
-.all-post-footer {
-    background-image: linear-gradient(180deg, #151515, rgba(21, 21, 21, 0.55)), url('../img/footer.jpg');
-    background-position: center;
-    background-size: cover;
-    padding-bottom: 30px;
-    &-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 90%;
-        margin: auto;
-        margin-top: 150px;
-        border: 1px solid $text;
-        @media (max-width: $big-screen-1) {
-            grid-template-columns: 1fr;
-        }
-        h1 {
-            font-size: 1.5rem;
-            color: $white;
-            margin-bottom: 20px;
-        }
-        &--box-1 {
-            padding: 20px;
-            border-right: 1px solid $text;
-            @media (max-width: $big-screen-1) {
-                border-right: none;
-                border-bottom: 1px solid $text;
-                text-align: center;
-            }
-            p {
-                color: $text;
-                padding-bottom: 40px;
-            }
-            a {
-                color: $text;
-                text-decoration: none;
-                margin-top: 10%;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-        &--box-2 {
-            padding: 20px;
-            border-right: 1px solid $text;
-            h1 {
-                text-align: center;
-            }
-            @media (max-width: $big-screen-1) {
-                border-right: none;
-                border-bottom: 1px solid $text;
-            }
-        }
-        &--box-3 {
-            text-align: end;
-            @media (max-width: $big-screen-1) {
-                text-align: center;
-            }
-            &__category {
-                padding: 20px;
-                border-bottom: 1px solid $text;
-                height: 55%;
-                a {
-                    color: $text;
-                    text-decoration: none;
-                    margin-right: 10px;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-            &__copy-right {
-                padding: 10px;
-                @media (max-width: $big-screen-1) {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-                p {
-                    color: $text;
-                    @media (max-width: $big-screen-1) {
-                        margin: 0px 10px;
-                    }
-                }
-                a {
-                    color: $white;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
+  }
 }

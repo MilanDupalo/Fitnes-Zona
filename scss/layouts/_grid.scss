@@ -1,90 +1,97 @@
 .all-post {
+  display: grid;
+  grid-template-rows: 70px auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "header header header" "main main aside" "footer footer footer";
+  @media (max-width: 800px) {
     display: grid;
-    grid-template-rows: 70px auto auto;
+    grid-template-rows: 70px auto auto auto;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "header header header""main main aside""footer footer footer";
-    @media(max-width: 800px) {
-        display: grid;
-        grid-template-rows: 70px auto auto auto;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header""main main main""aside aside aside""footer footer footer";
+    grid-template-areas: "header header header" "main main main" "aside aside aside" "footer footer footer";
+  }
+  @media (max-width: 480px) {
+    display: grid;
+    grid-template-rows: 70px auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header" "main main main" "aside aside aside" "footer footer footer";
+  }
+  header {
+    grid-area: header;
+  }
+  main {
+    grid-area: main;
+    height: 300vh;
+    margin-top: 80vh;
+    @media (max-width: $breakpoint-tablet-small + 100px) {
+      margin-top: 70vh;
     }
-    @media(max-width: 480px) {
-        display: grid;
-        grid-template-rows: 70px auto auto auto;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "header header header""main main main""aside aside aside""footer footer footer";
+  }
+  aside {
+    grid-area: aside;
+    margin-top: 80vh;
+    width: 80%;
+    @media (max-width: $breakpoint-tablet-small + 100px) {
+      margin-top: 70vh;
+      width: 100%;
     }
-    header {
-        grid-area: header;
+  }
+  footer {
+    grid-area: footer;
+    margin-top: -200px;
+    @media (max-width: $breakpoint-tablet-small + 100px) {
+      margin-top: 0;
     }
-    main {
-        grid-area: main;
-        height: 300vh;
-        margin-top: 80vh;
-        @media (max-width: $breakpoint-tablet-small + 100px) {
-            margin-top: 70vh;
-        }
-    }
-    aside {
-        grid-area: aside;
-        margin-top: 80vh;
-        width: 80%;
-        @media (max-width: $breakpoint-tablet-small + 100px) {
-            margin-top: 70vh;
-            width: 100%;
-        }
-    }
-    footer {
-        grid-area: footer;
-        margin-top: -200px;
-        @media (max-width: $breakpoint-tablet-small + 100px) {
-            margin-top: 0;
-        }
-    }
+  }
 }
 
 .home-page {
-    @include grid-without-sidebar;
+  @include grid-without-sidebar;
 }
 
 .blog-post {
-    width: 98%;
-    margin: auto;
-    height: 250vh;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 30px;
-    @media (max-width: $breakpoint-mobile-big) {
-        display: block;
-        height: auto;
-    }
-    @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
-        grid-template-rows: repeat(10, 1fr);
-        height: 300vh;
-    }
+  width: 98%;
+  margin: auto;
+  height: 250vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 30px;
+  @media (max-width: $breakpoint-mobile-big) {
+    display: block;
+    height: auto;
+  }
+  @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
+    grid-template-rows: repeat(10, 1fr);
+    height: 300vh;
+  }
 }
 
 .single-post__blog-post {
-    width: 70%;
-    height: 120vh;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 20px;
-    @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        height: 180vh;
-        width: 90%;
-    }
-    @media (max-width: $breakpoint-mobile-big) {
-        display: block;
-        height: auto;
-        width: 98%;
-    }
+  width: 70%;
+  height: 120vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+  @media (min-width: $breakpoint-mobile-big) and (max-width: $big-screen-1) {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    height: 180vh;
+    width: 90%;
+  }
+  @media (max-width: $breakpoint-mobile-big) {
+    display: block;
+    height: auto;
+    width: 98%;
+  }
+}
+
+.section-margin {
+  margin: 0 20px;
+}
+.section-padding {
+  padding: 0 20px;
 }
